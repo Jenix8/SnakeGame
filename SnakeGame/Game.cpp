@@ -20,7 +20,6 @@ Snake& Snake::getInstance()
 }
 
 int score = 0; 
-int len = score + 1;
 DIR dir = DIR::R;
 PROGRESS pro = PROGRESS::PLAYING;
 
@@ -128,8 +127,6 @@ void Snake::update()
 			curY = saveY;
 		}
 	}
-
-	return;
 }
 
 void Snake::printGrid()
@@ -193,7 +190,7 @@ void Snake::run()
 	while (pro == PROGRESS::PLAYING)
 	{
 		printGrid();
-		Sleep(150);
+		Sleep(120);
 		input();
 		update();
 	}
