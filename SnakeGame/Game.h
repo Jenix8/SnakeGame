@@ -2,8 +2,8 @@
 #include <vector>
 using namespace std;
 
-static constexpr int W = 16;
-static constexpr int H = 16;
+static constexpr int W = 10;
+static constexpr int H = 10;
 
 enum class DIR { L, R, U, D };
 
