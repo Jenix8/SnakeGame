@@ -177,12 +177,21 @@ void Snake::init()
 	createApple();
 }
 
-void finish()
+void Snake::finish()
 {
 	if (pro == PROGRESS::DEFEAT)
 		printf("Game Over..\n");
 	else
 		printf("You Won!\n");
+
+	for (int i = 0; i < W + 2; i++)
+		for (int j = 0; j < H + 2; j++)
+		{
+			delete cell[i][j];
+			cell[i][j] = nullptr;
+		}
+
+	body.clear();
 }
 
 void Snake::run()

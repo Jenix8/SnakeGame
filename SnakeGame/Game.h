@@ -51,9 +51,8 @@ public:
 	void createApple();
 	void input();
 	void update();
-	bool check();
 	void printGrid();
-	
+	void finish();
 
 	Cell* cell[W + 2][H + 2] = { nullptr };
 	Cell* head = nullptr;
